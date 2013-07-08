@@ -4,25 +4,18 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jboss.bom</groupId>
-    <artifactId>jboss-bom-parent</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
-
+    <groupId>org.jboss.bom.brms</groupId>
+    <artifactId>jboss-javaee-6.0-with-drools</artifactId>
+    <version>5.3.1-redhat-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>JBoss BOM Parent</name>
-    <description>Dependency Management BOM Parent</description>
-
-    <url>http://www.jboss.org</url>
-    <issueManagement>
-        <system>JIRA</system>
-        <url>https://issues.jboss.org/</url>
-    </issueManagement>
+    <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
+    <description>Dependency Management for Java EE 6 Specification APIs with JBoss Drools</description>
 
     <scm>
-        <connection>scm:git:git@github.com:jboss-jdf/jboss-bom.git</connection>
-        <developerConnection>scm:git:git@github.com:jboss-jdf/jboss-bom.git</developerConnection>
-        <url>http://github.com/jboss-jdf/jboss-bom</url>
+        <connection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</connection>
+        <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</developerConnection>
+        <url>http://github.com/jboss-developer/jboss-brms-bom</url>
     </scm>
 
     <developers>
@@ -39,74 +32,17 @@
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
 
     <properties>
-        <!-- Versions of Arquillian and Shrinkwrap -->
-        <version.org.jboss.arquillian>1.0.3.Final</version.org.jboss.arquillian>
-        <version.org.jboss.arquillian.extension.drone>1.1.1.Final</version.org.jboss.arquillian.extension.drone>
-        <version.org.jboss.arquillian.graphene>1.0.0.Final</version.org.jboss.arquillian.graphene>
-        <version.org.jboss.as.arquillian.container>7.1.3.Final</version.org.jboss.as.arquillian.container>
-        <version.org.jboss.shrinkwrap.resolver>2.0.0-beta-5</version.org.jboss.shrinkwrap.resolver>
-        
-        <!-- Version of Deltaspike -->
-        <version.org.apache.deltaspike>0.4</version.org.apache.deltaspike>
-
         <!-- Version of Drools -->
-        <version.org.jboss.drools>5.5.0.Final </version.org.jboss.drools>
-
-        <!-- Versions of JBoss projects -->
-        <version.org.infinispan>5.2.4.Final</version.org.infinispan>
-        <version.org.jboss.errai>2.3.2.Final</version.org.jboss.errai>
-        <version.org.jboss.jbossts.jbossjts>4.16.4.Final</version.org.jboss.jbossts.jbossjts>
-        <version.org.jboss.logging>3.1.0.GA</version.org.jboss.logging>
-        <version.org.jboss.logging.processor>1.0.3.Final</version.org.jboss.logging.processor>
-        <version.org.jboss.resteasy>2.3.5.Final</version.org.jboss.resteasy>
-        <version.org.jboss.security.negotiation>2.1.1.Final</version.org.jboss.security.negotiation>
-        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final</version.org.jboss.spec.jboss.javaee.6.0>
-        <version.org.richfaces>4.3.1.Final</version.org.richfaces>
-        <version.org.picketlink>2.5.0.Beta5</version.org.picketlink>
-
-        <!-- Version of Hibernate projects -->
-        <version.org.hibernate>4.2.0.Final</version.org.hibernate>
-        <version.org.hibernate.validator>4.2.0.Final</version.org.hibernate.validator>
-        <version.org.hibernate.search>4.2.0.Final</version.org.hibernate.search>
-        <version.org.hibernate.javax.persistence>1.0.1.Final</version.org.hibernate.javax.persistence>
-        <version.org.hibernate-jpamodelgen>1.2.0.Final</version.org.hibernate-jpamodelgen>
-
-        <!-- Version of Hibernate 3 projects -->
-        <version.org.hibernate3>3.6.10.Final</version.org.hibernate3>
-        <version.org.hibernate3.validator>3.1.0.GA</version.org.hibernate3.validator>
-        <version.org.hibernate3.commons.annotations>3.2.0.Final</version.org.hibernate3.commons.annotations>
-
-        <!-- Versions of projects not directly under JBoss umbrella -->
-        <version.com.google.gwt>2.5.1</version.com.google.gwt>
-        <version.junit>4.10</version.junit>
-        <version.log4j>1.2.16</version.log4j>
-        <version.org.mvel>2.1.Beta8</version.org.mvel>
-        <version.org.osgi>4.2.0</version.org.osgi>
-        <version.org.testng>5.14.6</version.org.testng>
-        <version.javax.validation>1.0.0.GA</version.javax.validation>
+        <version.org.jboss.drools>5.5.0.Final</version.org.jboss.drools>
         
-        <!-- Versions of Spring Projects-->
-        <version.spring>3.2.2.RELEASE</version.spring>
-        <version.spring.security>3.1.3.RELEASE</version.spring.security>
-        <version.spring.webflow>2.3.2.RELEASE</version.spring.webflow>
-        <version.spring.ws>2.1.2.RELEASE</version.spring.ws>
-
-        <!-- Versions of Snowdrop -->
-        <version.snowdrop>2.0.5.Final</version.snowdrop>
-
-        <!-- Versions of Spring Third Party dependencies -->
-        <version.aopalliance>1.0</version.aopalliance>
-        <version.aspectj>1.7.1</version.aspectj>
-
-        <!-- Versions of Maven plugins, user must setup them by his/her own -->
-        <version.surefire.plugin>2.10</version.surefire.plugin>
-        <version.org.codehaus.mojo.gwt.maven.plugin>${version.com.google.gwt}</version.org.codehaus.mojo.gwt.maven.plugin>
-        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
-
+        <!-- Versions of JBoss projects -->
+        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final</version.org.jboss.spec.jboss.javaee.6.0>
+        
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
             https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
@@ -116,23 +52,46 @@
         </jboss.snapshots.repo.url>
     </properties>
 
-    <modules>
-        <module>jboss-javaee-6.0-with-all</module>
-        <module>jboss-javaee-6.0-with-deltaspike</module>
-        <module>jboss-javaee-6.0-with-drools</module>
-        <module>jboss-javaee-6.0-with-errai</module>
-        <module>jboss-javaee-6.0-with-hibernate</module>
-        <module>jboss-javaee-6.0-with-hibernate3</module>
-        <module>jboss-javaee-6.0-with-infinispan</module>
-        <module>jboss-javaee-6.0-with-logging</module>
-        <module>jboss-javaee-6.0-with-osgi</module>
-        <module>jboss-javaee-6.0-with-resteasy</module>
-        <module>jboss-javaee-6.0-with-richfaces</module>
-        <module>jboss-javaee-6.0-with-security</module>
-        <module>jboss-javaee-6.0-with-spring</module>
-        <module>jboss-javaee-6.0-with-tools</module>
-        <module>jboss-javaee-6.0-with-transactions</module>
-    </modules>
+    <dependencyManagement>
+
+        <dependencies>
+            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
+                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
+                a collection) of artifacts. We use this here so that we always get the correct 
+                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read 
+                this as the JBoss stack of the Java EE full Profile 6 APIs), and we use version 
+                3.0.2.Final which is the latest release of the stack. You can actually use 
+                this stack with any version of JBoss AS that implements Java EE 6, not just 
+                JBoss AS 7! -->
+            <dependency>
+                <groupId>org.jboss.spec</groupId>
+                <artifactId>jboss-javaee-6.0</artifactId>
+                <version>${version.org.jboss.spec.jboss.javaee.6.0}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>knowledge-api</artifactId>
+                <version>${version.org.jboss.drools}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-core</artifactId>
+                <version>${version.org.jboss.drools}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-compiler</artifactId>
+                <version>${version.org.jboss.drools}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools.planner</groupId>
+                <artifactId>drools-planner-core</artifactId>
+                <version>${version.org.jboss.drools}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <distributionManagement>
         <repository>
@@ -172,3 +131,4 @@
     </profiles>
 
 </project>
+
