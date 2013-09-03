@@ -12,6 +12,7 @@
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
     <description>Dependency Management for Java EE 6 Specification APIs with JBoss Drools</description>
 
+    <url>http://www.jboss.org</url>
     <scm>
         <connection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</connection>
         <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</developerConnection>
