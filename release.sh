@@ -23,8 +23,8 @@ EMAIL_FROM="\"JDF Publish Script\" <benevides@redhat.com>"
 JIRA_PROJECT="12310320"
 #JIRA PLAYGROUND -- JIRA_PROJECT="10073"
 JIRA_TO="pgier"
-JIRA_SUMMARY="Upgrade jboss-bom project in EAP"
-JIRA_DESCRIPTION="The \${RELEASEVERSION} version of the jboss-bom project has been released upstream. This needs to be merge with the eap branch and built for the eap Maven repo."
+JIRA_SUMMARY="Upgrade jboss-brms-bom project in BRMS"
+JIRA_DESCRIPTION="The \${RELEASEVERSION} version of the jboss-brms-bom project has been released upstream. This needs to be merge with the eap branch and built for the eap Maven repo."
 
 
 # SCRIPT
