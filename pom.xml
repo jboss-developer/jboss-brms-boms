@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>5.3.1-redhat-SNAPSHOT</version>
+    <version>6.1.0-redhat-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -14,9 +14,9 @@
 
     <url>http://www.jboss.org</url>
     <scm>
-        <connection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</connection>
-        <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-bom.git</developerConnection>
-        <url>http://github.com/jboss-developer/jboss-brms-bom</url>
+        <connection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</connection>
+        <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</developerConnection>
+        <url>http://github.com/jboss-developer/jboss-brms-boms</url>
     </scm>
 
     <developers>
@@ -39,10 +39,10 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.jboss.drools>5.5.0.Final</version.org.jboss.drools>
+        <version.org.jboss.drools>6.1.0-SNAPSHOT</version.org.jboss.drools>
         
         <!-- Versions of JBoss projects -->
-        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final</version.org.jboss.spec.jboss.javaee.6.0>
+        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
         
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
@@ -63,7 +63,7 @@
                 this as the JBoss stack of the Java EE full Profile 6 APIs), and we use version 
                 3.0.2.Final which is the latest release of the stack. You can actually use 
                 this stack with any version of JBoss AS that implements Java EE 6, not just 
-                JBoss AS 7! -->
+                JBoss EAP! -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
                 <artifactId>jboss-javaee-6.0</artifactId>
@@ -71,25 +71,45 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Drools -->
             <dependency>
                 <groupId>org.drools</groupId>
-                <artifactId>knowledge-api</artifactId>
+                <artifactId>drools-bom</artifactId>
                 <version>${version.org.jboss.drools}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
+            <!-- Kie -->
             <dependency>
-                <groupId>org.drools</groupId>
-                <artifactId>drools-core</artifactId>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-bom</artifactId>
                 <version>${version.org.jboss.drools}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
+            <!-- Guvnor -->
             <dependency>
-                <groupId>org.drools</groupId>
-                <artifactId>drools-compiler</artifactId>
+                <groupId>org.guvnor</groupId>
+                <artifactId>guvnor-bom</artifactId>
                 <version>${version.org.jboss.drools}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
+            <!-- Jbpm -->
             <dependency>
-                <groupId>org.drools.planner</groupId>
-                <artifactId>drools-planner-core</artifactId>
+                <groupId>org.jbpm</groupId>
+                <artifactId>jbpm-bom</artifactId>
                 <version>${version.org.jboss.drools}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Optaplanner -->
+            <dependency>
+                <groupId>org.optaplanner</groupId>
+                <artifactId>optaplanner-bom</artifactId>
+                <version>${version.org.jboss.drools}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
