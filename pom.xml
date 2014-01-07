@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-redhat-SNAPSHOT</version>
+    <version>6.1.0-build-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -39,7 +39,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.jboss.drools>6.1.0-SNAPSHOT</version.org.jboss.drools>
+        <version.org.kie>6.1.0-SNAPSHOT</version.org.kie>
         
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
@@ -75,7 +75,7 @@
             <dependency>
                 <groupId>org.drools</groupId>
                 <artifactId>drools-bom</artifactId>
-                <version>${version.org.jboss.drools}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -83,7 +83,7 @@
             <dependency>
                 <groupId>org.kie</groupId>
                 <artifactId>kie-bom</artifactId>
-                <version>${version.org.jboss.drools}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -91,7 +91,7 @@
             <dependency>
                 <groupId>org.guvnor</groupId>
                 <artifactId>guvnor-bom</artifactId>
-                <version>${version.org.jboss.drools}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -99,7 +99,7 @@
             <dependency>
                 <groupId>org.jbpm</groupId>
                 <artifactId>jbpm-bom</artifactId>
-                <version>${version.org.jboss.drools}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -107,7 +107,7 @@
             <dependency>
                 <groupId>org.optaplanner</groupId>
                 <artifactId>optaplanner-bom</artifactId>
-                <version>${version.org.jboss.drools}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
