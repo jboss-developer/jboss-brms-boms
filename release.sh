@@ -9,6 +9,11 @@ if [[ $BASH_VERSION < $REQUIRED_BASH_VERSION ]]; then
   exit
 fi
 
+if [[ -z "$RELEASE_REPO_URL" ]]; then
+  echo "You must set the RELEASE_REPO_URL environment variable to your local checkout of https://github.com/jboss-developer/temp-maven-repo"
+  exit
+fi
+
 # Canonicalise the source dir, allow this script to be called anywhere
 DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 
@@ -77,7 +82,7 @@ release()
    $DIR/release-utils.sh -u -o $RELEASEVERSION -n $NEWSNAPSHOTVERSION
    git commit -a -m "Prepare for development of $NEWSNAPSHOTVERSION"
    git push upstream HEAD --tags
-   echo "***** JBoss BOMs released"
+   echo "***** JBoss BRMS BOMs released"
    read -p "Do you want to send release notifcations to $EAP_EMAIL_TO[y/N]? " yn
    case $yn in
        [Yy]* ) notify_email;;
