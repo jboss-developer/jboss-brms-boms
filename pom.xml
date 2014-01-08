@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.1.0-build-1</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -110,6 +110,14 @@
                 <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            
+            <!-- SL4J -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-jdk14</artifactId>
+                <version>1.7.2.jbossorg-1</version>
+                <scope>runtime</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
