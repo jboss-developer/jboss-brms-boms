@@ -87,14 +87,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Guvnor -->
-            <dependency>
-                <groupId>org.guvnor</groupId>
-                <artifactId>guvnor-bom</artifactId>
-                <version>${version.org.kie}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <!-- Jbpm -->
             <dependency>
                 <groupId>org.jbpm</groupId>
@@ -116,7 +108,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-jdk14</artifactId>
-                <version>1.7.2.jbossorg-1</version>
+                <version>1.7.5</version>
                 <scope>runtime</scope>
             </dependency>
         </dependencies>
