@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.1.0-build-2</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -39,7 +39,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.1.0-SNAPSHOT</version.org.kie>
+        <version.org.kie>6.0.1.Final</version.org.kie>
         
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
