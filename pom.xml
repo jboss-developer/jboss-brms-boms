@@ -39,7 +39,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.0.1.Final</version.org.kie>
+        <version.org.kie>6.0.0-redhat-9</version.org.kie>
         
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
