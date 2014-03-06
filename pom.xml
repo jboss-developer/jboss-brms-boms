@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.1.0-build-5</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -40,10 +40,10 @@
     <properties>
         <!-- Version of Drools -->
         <version.org.kie>6.0.0-redhat-9</version.org.kie>
-        
+
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
-        
+
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
             https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
@@ -56,13 +56,13 @@
     <dependencyManagement>
 
         <dependencies>
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including 
-                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
-                a collection) of artifacts. We use this here so that we always get the correct 
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read 
-                this as the JBoss stack of the Java EE full Profile 6 APIs), and we use version 
-                3.0.2.Final which is the latest release of the stack. You can actually use 
-                this stack with any version of JBoss AS that implements Java EE 6, not just 
+            <!-- JBoss distributes a complete set of Java EE 6 APIs including
+                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
+                a collection) of artifacts. We use this here so that we always get the correct
+                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read
+                this as the JBoss stack of the Java EE full Profile 6 APIs), and we use version
+                3.0.2.Final which is the latest release of the stack. You can actually use
+                this stack with any version of JBoss AS that implements Java EE 6, not just
                 JBoss EAP! -->
             <dependency>
                 <groupId>org.jboss.spec</groupId>
@@ -103,12 +103,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            
+
             <!-- SL4J -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-jdk14</artifactId>
                 <version>1.7.5</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- jbpm-test uses logback configuration file -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.0.13</version>
                 <scope>runtime</scope>
             </dependency>
         </dependencies>
