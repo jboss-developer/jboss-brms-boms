@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.1.0-build-6</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -40,6 +40,8 @@
     <properties>
         <!-- Version of Drools -->
         <version.org.kie>6.0.0-redhat-9</version.org.kie>
+        <version.logback-classic>1.0.13</version.logback-classic>
+        
 
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
@@ -104,21 +106,14 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- SL4J -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-jdk14</artifactId>
-                <version>1.7.5</version>
-                <scope>runtime</scope>
-            </dependency>
-
-            <!-- jbpm-test uses logback configuration file -->
+            <!-- Logging Check https://bugzilla.redhat.com/show_bug.cgi?id=995133 -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.0.13</version>
+                <version>${version.logback-classic}</version>
                 <scope>runtime</scope>
             </dependency>
+            
         </dependencies>
     </dependencyManagement>
 
