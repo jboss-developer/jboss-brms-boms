@@ -19,6 +19,15 @@
         <url>http://github.com/jboss-developer/jboss-brms-boms</url>
     </scm>
 
+    <!-- This repository declaration should be removed when
+        optaplanner is available on http://maven.repository.redhat.com/techpreview/all/ -->
+    <repositories>
+        <repository>
+            <id>integration-platform</id>
+            <url>http://maven.repository.redhat.com/techpreview/ip6/6.0.0.Beta/maven-repository/</url>
+        </repository>
+    </repositories>
+
     <developers>
         <developer>
             <id>jboss.org</id>
@@ -40,8 +49,12 @@
     <properties>
         <!-- Version of Drools -->
         <version.org.kie>6.0.0-redhat-9</version.org.kie>
+
+        <!-- Version of Optaplanner -->
+        <version.org.optaplanner>6.0.0-redhat-4</version.org.optaplanner>
+
+        <!-- Version of logback used on jbpm-test -->
         <version.logback-classic>1.0.13</version.logback-classic>
-        
 
         <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
@@ -101,7 +114,7 @@
             <dependency>
                 <groupId>org.optaplanner</groupId>
                 <artifactId>optaplanner-bom</artifactId>
-                <version>${version.org.kie}</version>
+                <version>${version.org.optaplanner}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -113,7 +126,6 @@
                 <version>${version.logback-classic}</version>
                 <scope>runtime</scope>
             </dependency>
-            
         </dependencies>
     </dependencyManagement>
 
