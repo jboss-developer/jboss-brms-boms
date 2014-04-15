@@ -6,18 +6,11 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.0.2.Final</version>
+    <version>6.0.2.GA-redhat-1</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
     <description>Dependency Management for Java EE 6 Specification APIs with JBoss Drools</description>
-
-    <url>http://www.jboss.org</url>
-    <scm>
-        <connection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</connection>
-        <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</developerConnection>
-        <url>http://github.com/jboss-developer/jboss-brms-boms</url>
-    </scm>
 
     <developers>
         <developer>
@@ -39,7 +32,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.0.2-redhat-6</version.org.kie>
+        <version.org.kie>6.0.2-redhat-7</version.org.kie>
 
         <!-- Version of logback used on jbpm-test -->
         <!-- Version defined on org.jboss.integration-platform:jboss-integration-platform-parent:6.0.0.CR6-redhat-3 -->
@@ -129,19 +122,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <distributionManagement>
-        <repository>
-            <id>jboss-releases-repository</id>
-            <name>JBoss Releases Repository</name>
-            <url>${jboss.releases.repo.url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>jboss-snapshots-repository</id>
-            <name>JBoss Snapshots Repository</name>
-            <url>${jboss.snapshots.repo.url}</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <profiles>
         <profile>
