@@ -46,7 +46,10 @@
         <version.logback-classic>1.0.9</version.logback-classic>
 
         <!-- Versions of JBoss projects -->
-        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
+        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-4</version.org.jboss.spec.jboss.javaee.6.0>
+
+        <!-- Override EAP 6.1.1 shrinkwrap version -->
+        <version.org.jboss.shrinkwrap.resolver>2.0.0</version.org.jboss.shrinkwrap.resolver>
 
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
@@ -60,6 +63,15 @@
     <dependencyManagement>
 
         <dependencies>
+            <!-- Override EAP 6.1.1 shrinkwrap version -->
+            <dependency>
+                <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                <artifactId>shrinkwrap-resolver-bom</artifactId>
+                <version>${version.org.jboss.shrinkwrap.resolver}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- JBoss distributes a complete set of Java EE 6 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
                 a collection) of artifacts. We use this here so that we always get the correct
