@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.0.2.GA-redhat-4</version>
+    <version>6.0.2.GA-redhat-5</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -32,7 +32,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.0.3-redhat-3</version.org.kie>
+        <version.org.kie>6.0.3-redhat-4</version.org.kie>
 
         <!-- Version of logback used on jbpm-test -->
         <!-- Version defined on org.jboss.integration-platform:jboss-integration-platform-parent:6.0.0.CR6-redhat-3 -->
