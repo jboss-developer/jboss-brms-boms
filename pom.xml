@@ -6,7 +6,7 @@
 
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
@@ -39,16 +39,17 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.0.0-redhat-9</version.org.kie>
-
-        <!-- Version of Optaplanner -->
-        <version.org.optaplanner>6.1.0.Beta1</version.org.optaplanner>
-
+        <version.org.kie>6.1.0.CR1-redhat-1</version.org.kie>
+        
         <!-- Version of logback used on jbpm-test -->
-        <version.logback-classic>1.0.13</version.logback-classic>
+        <!-- Version defined on org.jboss.integration-platform:jboss-integration-platform-parent:6.0.0.CR6-redhat-3 -->
+        <version.logback-classic>1.0.9</version.logback-classic>
 
         <!-- Versions of JBoss projects -->
-        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-7</version.org.jboss.spec.jboss.javaee.6.0>
+        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-4</version.org.jboss.spec.jboss.javaee.6.0>
+
+        <!-- Override EAP 6.1.1 shrinkwrap version -->
+        <version.org.jboss.shrinkwrap.resolver>2.0.0</version.org.jboss.shrinkwrap.resolver>
 
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
@@ -62,6 +63,15 @@
     <dependencyManagement>
 
         <dependencies>
+            <!-- Override EAP 6.1.1 shrinkwrap version -->
+            <dependency>
+                <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                <artifactId>shrinkwrap-resolver-bom</artifactId>
+                <version>${version.org.jboss.shrinkwrap.resolver}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- JBoss distributes a complete set of Java EE 6 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
                 a collection) of artifacts. We use this here so that we always get the correct
@@ -105,7 +115,7 @@
             <dependency>
                 <groupId>org.optaplanner</groupId>
                 <artifactId>optaplanner-bom</artifactId>
-                <version>${version.org.optaplanner}</version>
+                <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
