@@ -5,14 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.bom.brms</groupId>
-    <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
+    <artifactId>jboss-brms-bpmsuite-bom-parent</artifactId>
+    <version>6.1.0-build-SNAPSHOT</version>
+
     <packaging>pom</packaging>
 
-    <name>JBoss Java EE 6 Specification APIs with JBoss Drools</name>
-    <description>Dependency Management for Java EE 6 Specification APIs with JBoss Drools</description>
+    <name>JBoss BRMS/BPM Suite BOM Parent</name>
+    <description>Dependency Management BOM Parent</description>
 
     <url>http://www.jboss.org</url>
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://issues.jboss.org/</url>
+    </issueManagement>
+
     <scm>
         <connection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</connection>
         <developerConnection>scm:git:git@github.com:jboss-developer/jboss-brms-boms.git</developerConnection>
@@ -33,23 +39,11 @@
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
 
     <properties>
-        <!-- Version of Drools -->
-        <version.org.kie>6.2.0-SNAPSHOT</version.org.kie>
-        
-        <!-- Version of logback used on jbpm-test -->
-        <!-- Version defined on org.jboss.integration-platform:jboss-integration-platform-parent:6.0.0.CR6-redhat-3 -->
-        <version.logback-classic>1.0.9</version.logback-classic>
-
-        <!-- Versions of JBoss projects -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-13</version.org.jboss.spec.jboss.javaee.6.0>
-
-        <!-- Override EAP 6.1.1 shrinkwrap version -->
-        <version.org.jboss.shrinkwrap.resolver>2.0.0</version.org.jboss.shrinkwrap.resolver>
 
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
@@ -60,75 +54,9 @@
         </jboss.snapshots.repo.url>
     </properties>
 
-    <dependencyManagement>
-
-        <dependencies>
-            <!-- Override EAP 6.1.1 shrinkwrap version -->
-            <dependency>
-                <groupId>org.jboss.shrinkwrap.resolver</groupId>
-                <artifactId>shrinkwrap-resolver-bom</artifactId>
-                <version>${version.org.jboss.shrinkwrap.resolver}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- JBoss distributes a complete set of Java EE 6 APIs including
-                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
-                a collection) of artifacts. We use this here so that we always get the correct
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read
-                this as the JBoss stack of the Java EE full Profile 6 APIs), and we use version
-                3.0.2.Final which is the latest release of the stack. You can actually use
-                this stack with any version of JBoss AS that implements Java EE 6, not just
-                JBoss EAP! -->
-            <dependency>
-                <groupId>org.jboss.spec</groupId>
-                <artifactId>jboss-javaee-6.0</artifactId>
-                <version>${version.org.jboss.spec.jboss.javaee.6.0}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Drools -->
-            <dependency>
-                <groupId>org.drools</groupId>
-                <artifactId>drools-bom</artifactId>
-                <version>${version.org.kie}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Kie -->
-            <dependency>
-                <groupId>org.kie</groupId>
-                <artifactId>kie-bom</artifactId>
-                <version>${version.org.kie}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Jbpm -->
-            <dependency>
-                <groupId>org.jbpm</groupId>
-                <artifactId>jbpm-bom</artifactId>
-                <version>${version.org.kie}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- Optaplanner -->
-            <dependency>
-                <groupId>org.optaplanner</groupId>
-                <artifactId>optaplanner-bom</artifactId>
-                <version>${version.org.kie}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- Logging Check https://bugzilla.redhat.com/show_bug.cgi?id=995133 -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${version.logback-classic}</version>
-                <scope>runtime</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <modules>
+        <module>jboss-javaee-6.0-with-drools</module>
+    </modules>
 
     <distributionManagement>
         <repository>
@@ -168,4 +96,3 @@
     </profiles>
 
 </project>
-
