@@ -62,6 +62,7 @@
 
     <modules>
         <module>jboss-javaee-6.0-with-drools</module>
+        <module>jboss-brms-bpmsuite-bom</module>
     </modules>
 
     <distributionManagement>
