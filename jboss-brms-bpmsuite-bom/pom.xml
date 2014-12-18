@@ -28,15 +28,15 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.jbpm</groupId>
-                <artifactId>jbpm-bom</artifactId>
+                <groupId>org.optaplanner</groupId>
+                <artifactId>optaplanner-bom</artifactId>
                 <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.optaplanner</groupId>
-                <artifactId>optaplanner-bom</artifactId>
+                <groupId>org.jbpm</groupId>
+                <artifactId>jbpm-bom</artifactId>
                 <version>${version.org.kie}</version>
                 <type>pom</type>
                 <scope>import</scope>
