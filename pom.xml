@@ -39,7 +39,7 @@
 
     <properties>
         <!-- Version of Drools -->
-        <version.org.kie>6.1.0.CR1-redhat-1</version.org.kie>
+        <version.org.kie>6.2.0-SNAPSHOT</version.org.kie>
         
         <!-- Version of logback used on jbpm-test -->
         <!-- Version defined on org.jboss.integration-platform:jboss-integration-platform-parent:6.0.0.CR6-redhat-3 -->
