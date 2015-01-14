@@ -49,6 +49,7 @@
     </licenses>
 
     <properties>
+        <!-- Versions of Java EE6 spec artifacts, keep in sync with what the target EAP uses -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-13</version.org.jboss.spec.jboss.javaee.6.0>
 
         <!-- Repository Deployment URLs -->
@@ -65,6 +66,19 @@
         <module>jboss-javaee-6.0-with-brms-bpmsuite</module>
     </modules>
 
+    <repositories>
+        <!-- Bootstrap repository to locate the parent pom when the parent pom has not been build locally. -->
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+        <!-- Product repository with productized (not only) EAP artifacts -->
+        <repository>
+            <id>Red Hat Product Repository</id>
+            <url>https://maven.repository.redhat.com/techpreview/all/</url>
+        </repository>
+    </repositories>
     <distributionManagement>
         <repository>
             <id>jboss-releases-repository</id>
