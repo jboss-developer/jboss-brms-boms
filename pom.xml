@@ -50,7 +50,7 @@
 
     <properties>
         <!-- Versions of Java EE6 spec artifacts, keep in sync with what the target EAP uses -->
-        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-13</version.org.jboss.spec.jboss.javaee.6.0>
+        <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-15</version.org.jboss.spec.jboss.javaee.6.0>
 
         <!-- Repository Deployment URLs -->
         <jboss.releases.repo.url>
