@@ -63,6 +63,7 @@
 
     <modules>
         <module>jboss-brms-bpmsuite-bom</module>
+        <module>jboss-brms-bpmsuite-platform-bom</module>
         <module>jboss-javaee-6.0-with-brms-bpmsuite</module>
     </modules>
 
