@@ -4,12 +4,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-parent-metadata</artifactId>
-        <version>6.3.0-SNAPSHOT</version>
-    </parent>
-
     <groupId>org.jboss.bom.brms</groupId>
     <artifactId>jboss-brms-bpmsuite-bom-parent</artifactId>
     <version>6.2.0-SNAPSHOT</version>
@@ -49,6 +43,7 @@
     </licenses>
 
     <properties>
+        <version.org.kie>6.3.0-SNAPSHOT</version.org.kie>
         <!-- Versions of Java EE6 spec artifacts, keep in sync with what the target EAP uses -->
         <version.org.jboss.spec.jboss.javaee.6.0>3.0.2.Final-redhat-15</version.org.jboss.spec.jboss.javaee.6.0>
 
